@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: rgb(247, 232, 189);
+}
+
+body{
+    height: 100vh;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("./icons/background.jpg");
+    background-size: cover;
+ 
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+#content{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*      Home Page       */
+.restaurant-name.loaded{
+    opacity: 1;
+}
+
+.restaurant-name{
+    font-family: sans-serif;
+    font-size: 100px;
+    font-weight: 900;
+    opacity: 0;
+    transition: opacity 2.0s ease-in-out;
+}
+
+.order-available.loaded{
+    opacity: 1;
+}
+
+.order-available{
+    font-size: 40px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 1.0s ease-in-out;
+}
+
+/*  Header  */
+nav{
+    display: flex;
+    gap: 1em;
+}
+
+button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    font-size: 1.5em;
+    font-weight: 600;
+    width: 150px;
+    height: 50px;
+}
+
+/*      menu      */
+.menu-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    column-gap: 300px;
+    row-gap: 100px;
+    transition: .5s;
+
+}
+
+.item-container{
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.item-container.loaded{
+    opacity: 1;
+}
+
+
+
+.details-container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 350px;
+    gap: 5px;
+}
+.pizza-name{
+    
+    font-weight: 900;
+    font-size: 2em;
+    color: rgb(219, 162, 5);
+
+}
+
+.pizza-price{
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.pizza-ingredients{
+    font-size: 1em;
+    max-width: 30ch;
+    font-weight: bold;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    transition: transform .2s;
+    
+}
+
+img:hover{
+    transform: scale(1.6);
+}
+
+/*      about       */
+
+.about-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.welcome-container.loaded,.story-container.loaded,
+.philosophy-container.loaded,.joinUs-container.loaded{
+    opacity: 1;
+}
+
+.welcome-container,.story-container,
+.philosophy-container,.joinUs-container{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.heading{
+    font-weight: 900;
+    font-size: 3em;
+    color: rgb(245, 176, 26);
+}
+
+.paragraph{
+    max-width: 80ch;
+    font-size: 1.2em;
+    line-height: 1.3;
+}
+
+
