@@ -6,7 +6,7 @@ import pepperoniImage from './icons/pepperoni.jpg';
 import vegeterianImage from './icons/vegeterian.jpg';
 import meatLoversImage from './icons/meatLovers.jpg';
 
-const imageMap = {
+export const imageMap = {
     "Americana": americanaImage,
     "Margherita": margheritaImage,
     "Chicken Mushroom pizza": mushroomImage,
@@ -15,7 +15,7 @@ const imageMap = {
     "Meat Lovers": meatLoversImage,
 };
 
-export function loadMenu(){
+export default function loadMenu(){
     const menu = document.createElement('div');
     menu.classList.add('menu-container');
 
@@ -36,7 +36,7 @@ export function loadMenu(){
         image.classList.add('item-image');
 
         name.innerHTML = item[0];
-        price.innerHTML = item[1];
+        price.innerHTML = `${item[1]}$`;
         ingredients.innerHTML = item[2];
         image.src = imageMap[item[0]];
 
